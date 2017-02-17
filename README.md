@@ -20,6 +20,20 @@ Also works in the browser with [browserify](http://browserify.org/)!
 ## usage
 
 ```js
+function fn (arg, cb) {
+  t.equal(arg, 'foo')
+  cb(null, 'bar')
+}
+
+const memoFn = memo(fn)
+
+memoFn('foo', (err, result) => {
+  console.log(result) // prints 'bar'
+
+  memoFn('foo', (err, result) => {
+    console.log(result) // prints 'bar', cached, does not call fn()
+  })
+})
 ```
 
 ## API

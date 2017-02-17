@@ -9,9 +9,9 @@ test('one argument function', (t) => {
     cb(null, 'bar')
   }
 
-  const fn2 = memo(fn)
+  const memoFn = memo(fn)
 
-  fn2('foo', (err, result) => {
+  memoFn('foo', (err, result) => {
     t.error(err)
     t.equal(result, 'bar')
   })
@@ -25,13 +25,13 @@ test('one argument function, called twice', (t) => {
     cb(null, 'bar')
   }
 
-  const fn2 = memo(fn)
+  const memoFn = memo(fn)
 
-  fn2('foo', (err, result) => {
+  memoFn('foo', (err, result) => {
     t.error(err)
     t.equal(result, 'bar')
 
-    fn2('foo', (err, result) => { // should be cached, so `fn` is not called again
+    memoFn('foo', (err, result) => { // should be cached, so `fn` is not called again
       t.error(err)
       t.equal(result, 'bar')
     })
@@ -61,21 +61,21 @@ test('two argument function, called twice', (t) => {
     }
   }
 
-  const fn2 = memo(fn)
+  const memoFn = memo(fn)
 
-  fn2('foo1', 'foo2', (err, result) => {
+  memoFn('foo1', 'foo2', (err, result) => {
     t.error(err)
     t.equal(result, 'bar')
 
-    fn2('foo1', 'foo2', (err, result) => { // should be cached, so `fn` is not called again
+    memoFn('foo1', 'foo2', (err, result) => { // should be cached, so `fn` is not called again
       t.error(err)
       t.equal(result, 'bar')
 
-      fn2('foo1', 'baz', (err, result) => { // should not be cached, since one arg changed
+      memoFn('foo1', 'baz', (err, result) => { // should not be cached, since one arg changed
         t.error(err)
         t.equal(result, 'new')
 
-        fn2('baz', 'foo2', (err, result) => { // should not be cached, since one arg changed
+        memoFn('baz', 'foo2', (err, result) => { // should not be cached, since one arg changed
           t.error(err)
           t.equal(result, 'new2')
         })
