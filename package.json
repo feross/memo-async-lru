@@ -1,7 +1,7 @@
 {
   "name": "memo-async-lru",
   "description": "Memoize Node.js style callback-last functions, using an in-memory LRU store",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
