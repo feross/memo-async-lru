@@ -1,3 +1,5 @@
+'use strict'
+
 module.exports = memo
 
 const AsyncLRU = require('async-lru')
