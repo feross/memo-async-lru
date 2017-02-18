@@ -1,10 +1,10 @@
 'use strict'
 
-module.exports = memo
+module.exports = memoAsyncLRU
 
 const AsyncLRU = require('async-lru')
 
-function memo (load, opts) {
+function memoAsyncLRU (load, opts) {
   opts = Object.assign({
     max: 100,
     maxAge: 60 * 60 * 1000 // 1 hour

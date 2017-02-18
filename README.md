@@ -1,11 +1,11 @@
-# memo [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url]
+# memo-async-lru [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url]
 
-[travis-image]: https://img.shields.io/travis/feross/memo/master.svg
-[travis-url]: https://travis-ci.org/feross/memo
-[npm-image]: https://img.shields.io/npm/v/memo.svg
-[npm-url]: https://npmjs.org/package/memo
-[downloads-image]: https://img.shields.io/npm/dm/memo.svg
-[downloads-url]: https://npmjs.org/package/memo
+[travis-image]: https://img.shields.io/travis/feross/memo-async-lru/master.svg
+[travis-url]: https://travis-ci.org/feross/memo-async-lru
+[npm-image]: https://img.shields.io/npm/v/memo-async-lru.svg
+[npm-url]: https://npmjs.org/package/memo-async-lru
+[downloads-image]: https://img.shields.io/npm/dm/memo-async-lru.svg
+[downloads-url]: https://npmjs.org/package/memo-async-lru
 
 ### Memoize Node.js style callback-last functions, using an in-memory LRU store
 
@@ -14,12 +14,14 @@ Also works in the browser with [browserify](http://browserify.org/)!
 ## install
 
 ```
-// UNPUBLISHED -- npm install memo
+// npm install memo-async-lru
 ```
 
 ## usage
 
 ```js
+const memo = require('memo-async-lru')
+
 function fn (arg, cb) {
   t.equal(arg, 'foo')
   cb(null, 'bar')

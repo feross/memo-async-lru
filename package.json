@@ -1,5 +1,5 @@
 {
-  "name": "memo",
+  "name": "memo-async-lru",
   "description": "Memoize Node.js style callback-last functions, using an in-memory LRU store",
   "version": "0.0.1",
   "author": {
@@ -8,7 +8,7 @@
     "url": "http://feross.org/"
   },
   "bugs": {
-    "url": "https://github.com/feross/memo/issues"
+    "url": "https://github.com/feross/memo-async-lru/issues"
   },
   "dependencies": {
     "async-lru": "^1.1.1"
@@ -17,7 +17,7 @@
     "standard": "*",
     "tape": "^4.0.0"
   },
-  "homepage": "https://github.com/feross/memo",
+  "homepage": "https://github.com/feross/memo-async-lru",
   "keywords": [
     "memoize",
     "memo",
@@ -31,7 +31,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/feross/memo.git"
+    "url": "git://github.com/feross/memo-async-lru.git"
   },
   "scripts": {
     "test": "standard && tape test/*.js"
