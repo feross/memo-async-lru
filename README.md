@@ -14,7 +14,7 @@ Also works in the browser with [browserify](http://browserify.org/)!
 ## install
 
 ```
-// npm install memo-async-lru
+npm install memo-async-lru
 ```
 
 ## usage
