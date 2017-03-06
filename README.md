@@ -43,7 +43,7 @@ memoFn('foo', (err, result) => {
 ### `memo(fn, [opts])`
 
 Memoize the given function `fn`, using
-[`async-lru`](https://www.npmjs.com/package/), a simple async LRU cache supporting
+[`async-lru`](https://www.npmjs.com/package/async-lru), a simple async LRU cache supporting
 O(1) set, get and eviction of old keys.
 
 The function must be a Node.js style function, where the last argument is a callback.
