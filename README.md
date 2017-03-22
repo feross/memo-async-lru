@@ -1,4 +1,4 @@
-# memo-async-lru [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url]
+# memo-async-lru [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
 
 [travis-image]: https://img.shields.io/travis/feross/memo-async-lru/master.svg
 [travis-url]: https://travis-ci.org/feross/memo-async-lru
@@ -6,6 +6,8 @@
 [npm-url]: https://npmjs.org/package/memo-async-lru
 [downloads-image]: https://img.shields.io/npm/dm/memo-async-lru.svg
 [downloads-url]: https://npmjs.org/package/memo-async-lru
+[standard-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
+[standard-url]: https://standardjs.com
 
 ### Memoize Node.js style callback-last functions, using an in-memory LRU store
 
