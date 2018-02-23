@@ -1,5 +1,7 @@
 # memo-async-lru [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/feross/memo-async-lru.svg)](https://greenkeeper.io/)
+
 [travis-image]: https://img.shields.io/travis/feross/memo-async-lru/master.svg
 [travis-url]: https://travis-ci.org/feross/memo-async-lru
 [npm-image]: https://img.shields.io/npm/v/memo-async-lru.svg
