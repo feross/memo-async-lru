@@ -41,7 +41,7 @@ test('one argument function, called twice', (t) => {
 test('two argument function, called twice', (t) => {
   t.plan(14)
 
-  var called = 0
+  let called = 0
   function fn (arg1, arg2, cb) {
     called += 1
     if (called === 1) {
@@ -80,6 +80,33 @@ test('two argument function, called twice', (t) => {
           t.equal(result, 'new2')
         })
       })
+    })
+  })
+})
+
+test('errors are not cached', (t) => {
+  t.plan(5)
+
+  let called = 0
+  function fn (arg, cb) {
+    called += 1
+    t.equal(arg, 'foo')
+    if (called === 1) {
+      cb(new Error('first call returns an error'))
+    } else if (called === 2) {
+      cb(null, 'bar') // second call does *not* return an error
+    } else {
+      t.fail('fn should not be called 3 times')
+    }
+  }
+
+  const memoFn = memo(fn)
+
+  memoFn('foo', (err, result) => {
+    t.ok(err instanceof Error)
+    memoFn('foo', (err, result) => {
+      t.error(err) // second call should not return a cached error
+      t.equal(result, 'bar')
     })
   })
 })
