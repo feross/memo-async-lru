@@ -1,3 +1,4 @@
+/*! memo-async-lru. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 'use strict'
 
 module.exports = memoAsyncLRU
